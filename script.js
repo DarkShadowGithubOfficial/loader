@@ -1,11 +1,13 @@
 let loader = document.querySelector('#loader');
-window.onload = function() {
+window.onload = function () {
   TweenLite.to('#loader', 3.5, {
     width: '100%'
   })
-  setTimeout(function() {
+  setTimeout(function () {
     document.querySelector('.load-box').style.display = 'none';
-    alert('Loaded!');
-    alert('Welcome!');
+    setTimeout(() => {
+      alert('Loaded!');
+      alert('Welcome!');
+    }, 400)
   }, 3500);
 }
